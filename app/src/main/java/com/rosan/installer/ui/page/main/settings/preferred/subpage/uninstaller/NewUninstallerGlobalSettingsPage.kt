@@ -45,6 +45,7 @@ import com.rosan.installer.ui.page.main.widget.setting.UninstallForAllUsersWidge
 import com.rosan.installer.ui.page.main.widget.setting.UninstallKeepDataWidget
 import com.rosan.installer.ui.page.main.widget.setting.UninstallRequireBiometricAuthWidget
 import com.rosan.installer.ui.page.main.widget.setting.UninstallSystemAppWidget
+//import com.rosan.installer.ui.page.main.widget.setting.UninstallerLocker
 import com.rosan.installer.ui.theme.getM3TopBarColor
 import com.rosan.installer.ui.theme.installerHazeEffect
 import com.rosan.installer.ui.theme.none
@@ -140,6 +141,7 @@ fun NewUninstallerGlobalSettingsPage(
                 SplicedColumnGroup(
                     title = stringResource(R.string.global)
                 ) {
+//                    item { UninstallerLocker(viewModel) }
                     item { UninstallKeepDataWidget(viewModel) }
                     item { UninstallForAllUsersWidget(viewModel) }
                     item { UninstallSystemAppWidget(viewModel) }

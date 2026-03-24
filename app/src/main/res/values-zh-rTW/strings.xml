@@ -17,7 +17,7 @@
     <string name="about">關於</string>
     <string name="other">其他</string>
     <string name="performance">效能</string>
-    <string name="about_detail">關於 InstallerX Revived</string>
+    <string name="about_detail">關於 InstallerX</string>
     <string name="get_update_detail">檢查軟體更新和新功能</string>
     <string name="get_source_code">查看原始碼</string>
     <string name="get_source_code_detail">在 GitHub 上查看原始碼</string>
@@ -518,8 +518,8 @@
     <string name="suggestion_bypass_blacklist_set_by_user">本次允許安裝</string>
     <string name="suggestion_bypass_blacklist_set_by_user_desc">本次允許黑名單內應用程式安裝</string>
     <string name="suggestion_retry_install_desc">重新嘗試安裝</string>
-    <string name="uninstall_title">卸載 InstallerX Revived</string>
-    <string name="uninstall_content">卸載本應用程式後，您將無法再使用 InstallerX Revived 安裝應用程式。</string>
+    <string name="uninstall_title">卸載 InstallerX</string>
+    <string name="uninstall_content">卸載本應用程式後，您將無法再使用 InstallerX 安裝應用程式。</string>
     <string name="auto_lock_default_installer">自動設為預設安裝程式</string>
     <string name="auto_lock_default_installer_desc">在開始新安裝時自動將此應用程式設為安裝程式</string>
     <string name="config_global_default">全域預設</string>

@@ -201,6 +201,24 @@
             android:name="app_description_content"
             android:resource="@string/uninstall_content" />
 
+        <!-- ===== Xposed Module Declaration ===== -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="InstallerX - 接管系统安装/卸载" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+        <meta-data
+            android:name="xposedsharedprefs"
+            android:value="true" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposedscope" />
+    
+    
     </application>
 
 </manifest>

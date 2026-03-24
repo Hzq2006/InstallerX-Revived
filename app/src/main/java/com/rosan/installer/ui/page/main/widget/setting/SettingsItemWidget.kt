@@ -76,6 +76,8 @@ import com.rosan.installer.ui.page.main.settings.preferred.subpage.about.AboutAc
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.about.AboutViewModel
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.lab.LabSettingsAction
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.lab.LabSettingsViewModel
+import com.rosan.installer.ui.page.main.settings.preferred.subpage.xposed.XposedSettingsAction
+import com.rosan.installer.ui.page.main.settings.preferred.subpage.xposed.XposedSettingsViewModel
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.theme.ThemeSettingsAction
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.theme.ThemeSettingsViewModel
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.uninstaller.UninstallerSettingsAction
@@ -1185,6 +1187,26 @@ fun UninstallRequireBiometricAuthWidget(viewModel: UninstallerSettingsViewModel,
         )
     }
 }
+
+// @Composable
+// fun UninstallerLocker(viewModel: XposedSettingsViewModel, isM3E: Boolean = true) {
+//     val uiState by viewModel.state.collectAsStateWithLifecycle()
+//     SwitchWidget(
+//         icon = AppIcons.AutoLockDefault,
+//         title = stringResource(id = R.string.uninstaller_locker),
+//         description = stringResource(id = R.string.uninstaller_locker_desc),
+//         checked = uiState.uninstallFlags.hasFlag(PackageManagerUtil.DELETE_SYSTEM_APP),
+//         onCheckedChange = {
+//             viewModel.dispatch(
+//                 UninstallerSettingsAction.ToggleGlobalUninstallFlag(
+//                     PackageManagerUtil.DELETE_SYSTEM_APP,
+//                     it
+//                 )
+//             )
+//         },
+//         isM3E = isM3E
+//     )
+// }
 
 @Composable
 fun ExportLogsWidget(viewModel: AboutViewModel) {

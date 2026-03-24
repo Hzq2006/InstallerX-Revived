@@ -75,6 +75,10 @@ class AppSettingsRepoImpl(
             appDataStore.getString(AppDataStore.LAB_HTTP_PROFILE, "Default"),
             appDataStore.getBoolean(AppDataStore.LAB_HTTP_SAVE_FILE, false),
             appDataStore.getBoolean(AppDataStore.LAB_SET_INSTALL_REQUESTER, false),
+
+            //Xposed settings
+            appDataStore.getBoolean(AppDataStore.AUTO_LOCK_UNINSTALLER, false),
+            appDataStore.getBoolean(AppDataStore.FORCE_LOCK_INSTALLER, false),
             appDataStore.getBoolean(AppDataStore.ENABLE_FILE_LOGGING, true),
 
             // Theme settings
@@ -136,6 +140,8 @@ class AppSettingsRepoImpl(
             labHttpProfile = HttpProfile.fromString(values[idx++] as String),
             labHttpSaveFile = values[idx++] as Boolean,
             labSetInstallRequester = values[idx++] as Boolean,
+            lockUninstaller = values[idx++] as Boolean,
+            forcelockInstaller = values[idx++] as Boolean,
             enableFileLogging = values[idx++] as Boolean,
 
             themeMode = runCatching { ThemeMode.valueOf(values[idx++] as String) }.getOrDefault(ThemeMode.SYSTEM),
@@ -244,6 +250,8 @@ class AppSettingsRepoImpl(
             BooleanSetting.LabModuleAlwaysRoot -> AppDataStore.LAB_MODULE_ALWAYS_ROOT
             BooleanSetting.LabHttpSaveFile -> AppDataStore.LAB_HTTP_SAVE_FILE
             BooleanSetting.LabSetInstallRequester -> AppDataStore.LAB_SET_INSTALL_REQUESTER
+            BooleanSetting.AutoLockUninstaller -> AppDataStore.AUTO_LOCK_UNINSTALLER
+            BooleanSetting.ForceLockInstaller -> AppDataStore.FORCE_LOCK_INSTALLER
             BooleanSetting.EnableFileLogging -> AppDataStore.ENABLE_FILE_LOGGING
         }
 

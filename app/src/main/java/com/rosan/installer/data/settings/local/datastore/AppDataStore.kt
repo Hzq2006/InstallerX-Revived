@@ -109,6 +109,10 @@ class AppDataStore(
         val LAB_HTTP_SAVE_FILE = booleanPreferencesKey("lab_http_save_file")
         val LAB_SET_INSTALL_REQUESTER = booleanPreferencesKey("lab_set_install_requester")
 
+        // Xposed
+        val AUTO_LOCK_UNINSTALLER = booleanPreferencesKey("auto_lock_uninstaller")
+        val FORCE_LOCK_INSTALLER = booleanPreferencesKey("force_lock_installer")
+
         // Debug
         val ENABLE_FILE_LOGGING = booleanPreferencesKey("enable_file_logging")
     }

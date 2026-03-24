@@ -16,7 +16,7 @@
     <string name="menu">Menü</string>
     <string name="about">Hakkında</string>
     <string name="other">Diğer</string>
-    <string name="about_detail">InstallerX Revived Hakkında</string>
+    <string name="about_detail">InstallerX Hakkında</string>
     <string name="get_update">Güncellemeleri al</string>
     <string name="get_update_detail">Yazılım güncellemelerini ve yeni özellikleri kontrol edin</string>
     <string name="get_source_code">Kaynak kodunu kontrol edin</string>
@@ -462,8 +462,8 @@
     <string name="installer_package_min_sdk_label">Min SDK:</string>
     <string name="installer_package_target_sdk_label">Hedef SDK:</string>
     <string name="exception_uninstall_failed_internal_error">Paket Yöneticisi iç hatası</string>
-    <string name="uninstall_title">InstallerX Revived\'ı Kaldır</string>
-    <string name="uninstall_content">Bu uygulamayı kaldırdıktan sonra, InstallerX Revived\'ı kullanarak uygulama yükleyemeyeceksiniz.</string>
+    <string name="uninstall_title">InstallerX\'ı Kaldır</string>
+    <string name="uninstall_content">Bu uygulamayı kaldırdıktan sonra, InstallerX\'ı kullanarak uygulama yükleyemeyeceksiniz.</string>
     <string name="auto_lock_default_installer">Varsayılan yükleyici olarak otomatik ayarla</string>
     <string name="auto_lock_default_installer_desc">Yeni bir yükleme başlatıldığında bu uygulamayı otomatikmen yükleyici olarak ayarlar</string>
     <string name="config_label_install_options_desc">Kaynak, kullanıcı gibi yükleme parametrelerini yapılandırın</string>

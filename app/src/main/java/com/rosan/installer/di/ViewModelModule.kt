@@ -14,6 +14,7 @@ import com.rosan.installer.ui.page.main.settings.preferred.subpage.installer.Ins
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.lab.LabSettingsViewModel
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.theme.ThemeSettingsViewModel
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.uninstaller.UninstallerSettingsViewModel
+import com.rosan.installer.ui.page.main.settings.preferred.subpage.xposed.XposedSettingsViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
@@ -26,6 +27,7 @@ val viewModelModule = module {
     viewModelOf(::InstallerSettingsViewModel)
     viewModelOf(::UninstallerSettingsViewModel)
     viewModelOf(::LabSettingsViewModel)
+    viewModelOf(::XposedSettingsViewModel)
     viewModelOf(::AboutViewModel)
 
     viewModel { (installer: InstallerSessionRepository) ->

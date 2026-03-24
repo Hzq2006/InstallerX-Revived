@@ -43,6 +43,8 @@ data class AppPreferences(
     val labHttpProfile: HttpProfile,
     val labHttpSaveFile: Boolean,
     val labSetInstallRequester: Boolean,
+    val lockUninstaller: Boolean,
+    val forcelockInstaller: Boolean,
     val enableFileLogging: Boolean,
     // Theme Settings
     val themeMode: ThemeMode,

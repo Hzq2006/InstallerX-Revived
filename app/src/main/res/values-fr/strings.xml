@@ -16,7 +16,7 @@
     <string name="menu">Menu</string>
     <string name="about">À propos</string>
     <string name="other">Autre</string>
-    <string name="about_detail">À propos d\'InstallerX Revived</string>
+    <string name="about_detail">À propos d\'InstallerX</string>
     <string name="get_update">Mettre à jour</string>
     <string name="get_update_detail">Vérifier les mises à jour et nouvelles fonctionnalités</string>
     <string name="get_source_code">Voir le code source</string>
@@ -457,8 +457,8 @@
     <string name="installer_show_oem_special">Afficher les infos d\'OEM</string>
     <string name="installer_show_oem_special_desc">Analyser et afficher des infos spécifiques aux APK de certains OEM dans le dialogue d\'installation</string>
     <string name="config_global_default">Valeur par défaut globale</string>
-    <string name="uninstall_title">Désinstaller InstallerX Revived</string>
-    <string name="uninstall_content">Après avoir désinstallé l\'appli, vous ne pourrez plus utiliser InstallerX Revived pour installer des applis.</string>
+    <string name="uninstall_title">Désinstaller InstallerX</string>
+    <string name="uninstall_content">Après avoir désinstallé l\'appli, vous ne pourrez plus utiliser InstallerX pour installer des applis.</string>
     <string name="auto_lock_default_installer">Définir automatiquement comme installateur par défaut</string>
     <string name="auto_lock_default_installer_desc">Définir automatiquement cette appli comme installateur lors du démarrage d\'une nouvelle installation</string>
     <string name="config_app_authorizer_desc">Autorisateur pour effectuer des opérations privilégiées</string>

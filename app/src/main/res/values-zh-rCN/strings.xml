@@ -21,7 +21,10 @@
     <string name="debug">调试</string>
     <string name="lab">实验室</string>
     <string name="lab_desc">访问实验性或开发中的新功能</string>
-    <string name="about_detail">关于 InstallerX Revived</string>
+    <string name="xposed">Xposed 模块集成</string>
+    <string name="xposed_1">模块设置</string>
+    <string name="xposed_desc">设置集成的 Xposed 模块</string>
+    <string name="about_detail">关于 InstallerX</string>
     <string name="app_version_info_format">%1$s%2$s %3$s (%4$s)</string>
     <string name="updating">正在更新…</string>
     <string name="get_update_detail">检查软件更新和新功能</string>
@@ -36,9 +39,9 @@
     <string name="export_logs_desc">导出应用日志</string>
     <string name="internet_access_enabled">联网</string>
     <string name="internet_access_disabled">离线</string>
-    <string name="uninstall_title">卸载 InstallerX Revived</string>
-    <string name="uninstall_content">卸载以后，你将不能再使用 InstallerX Revived 来安装应用。</string>
-    <string name="stable">正式版</string>
+    <string name="uninstall_title">卸载 InstallerX</string>
+    <string name="uninstall_content">卸载以后，你将不能再使用 InstallerX 来安装应用。</string>
+    <string name="stable">自改版</string>
     <string name="preview">预览版</string>
     <string name="unstable">测试版</string>
     <string name="enable_notification_hint">请启用通知以进行安装！</string>
@@ -116,7 +119,7 @@
     <string name="installer_settings_require_biometric_auth">安装时需要通过设备生物认证</string>
     <string name="installer_settings_require_biometric_auth_desc">在安装时请求系统进行生物识别进行认证</string>
     <string name="uninstaller_settings_require_biometric_auth">卸载时需要通过设备生物认证</string>
-    <string name="uninstaller_settings_require_biometric_auth_desc">在卸载时请求系统进行生物识别进行认证</string>
+    <string name="uninstaller_settings_require_biometric_auth_desc">卸载时请求进行生物识别进行认证</string>
     <string name="use_biometric_confirm_change_auth_settings">确实要修改此设置吗</string>
     <string name="use_biometric_confirm_change_auth_settings_desc">若要继续，请使用你的设备认证进行确认此操作</string>
     <string name="installer_settings_dialog_mode_options">对话框安装自定义选项</string>
@@ -386,6 +389,10 @@
     <string name="uninstall_all_users_disabled">已禁用为所有用户卸载</string>
     <string name="uninstall_delete_system_app">卸载系统应用</string>
     <string name="uninstall_delete_system_app_desc">允许为当前用户卸载系统应用</string>
+    <string name="uninstaller_locker">强制锁定卸载器</string>
+    <string name="uninstaller_locker_desc">将 InstallerX 强制锁定为默认卸载器</string>
+    <string name="Finstaller_locker">强制锁定安装器</string>
+    <string name="Finstaller_locker_desc">将 InstallerX 强制锁定为默认安装器</string>
     <string name="uninstall_system_app_disabled">已禁用卸载系统应用</string>
     <string name="uninstall_success_message">卸载成功</string>
     <string name="uninstall_failed_message">卸载失败</string>
@@ -709,4 +716,8 @@
     <string name="lab_set_install_requester_desc">向安装会话填写 OriginatingUid 字段来记录发起安装的应用，匹配系统包管理器行为</string>
     <string name="lab_mi_island">小米超级岛</string>
     <string name="lab_mi_island_desc">覆盖全局通知样式。仅当应用授权器设置为 Shizuku 时可绕过系统签名限制；Root 用户在手动关闭系统签名验证后可直接开启</string>
+    <string name="module_status_active">模块已激活</string>
+    <string name="module_status_inactive">模块未激活</string>
+    <string name="module_status_active_desc">InxLocker 模块正常工作中</string>
+    <string name="module_status_inactive_desc">请在 Xposed 管理器中激活模块</string>
 </resources>

@@ -13,7 +13,7 @@
     <string name="menu">メニュー</string>
     <string name="about">このアプリについて</string>
     <string name="other">その他</string>
-    <string name="about_detail">InstallerX Revived について</string>
+    <string name="about_detail">InstallerX について</string>
     <string name="user_terms">ユーザーポリシー</string>
     <string name="agree">同意</string>
     <string name="warning">警告</string>
@@ -29,8 +29,8 @@
     <string name="get_source_code_detail">GitHub でソースコードを確認します</string>
     <string name="internet_access_enabled">オンライン</string>
     <string name="internet_access_disabled">オフライン</string>
-    <string name="uninstall_title">InstallerX Revived をアンインストール</string>
-    <string name="uninstall_content">このアプリをアンインストールすると、InstallerX Revived を使用してアプリをインストールできなくなります。</string>
+    <string name="uninstall_title">InstallerX をアンインストール</string>
+    <string name="uninstall_content">このアプリをアンインストールすると、InstallerX を使用してアプリをインストールできなくなります。</string>
     <string name="stable">安定版</string>
     <string name="preview">プレビュー</string>
     <string name="unstable">不安定版</string>

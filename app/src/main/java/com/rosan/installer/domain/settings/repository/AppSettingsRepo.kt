@@ -59,6 +59,8 @@ enum class BooleanSetting {
     LabModuleAlwaysRoot,
     LabHttpSaveFile,
     LabSetInstallRequester,
+    AutoLockUninstaller,
+    ForceLockInstaller,
     EnableFileLogging
 }
 

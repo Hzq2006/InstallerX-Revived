@@ -18,7 +18,7 @@
     <string name="other">Andere</string>
     <string name="lab">Laboratorium</string>
     <string name="lab_desc">Toegang tot experimentele en ontwikkelaarsfuncties</string>
-    <string name="about_detail">Over InstallerX Revived</string>
+    <string name="about_detail">Over InstallerX</string>
     <string name="updating">Bijwerken…</string>
     <string name="get_update">Update krijgen</string>
     <string name="get_update_detail">Naar software-updates en nieuwe functies zoeken</string>
@@ -29,8 +29,8 @@
     <string name="get_source_code_detail">Naar broncode zoeken op GitHub</string>
     <string name="internet_access_enabled">Online</string>
     <string name="internet_access_disabled">Offline</string>
-    <string name="uninstall_title">InstallerX Revived verwijderen</string>
-    <string name="uninstall_content">Na het verwijderen van deze app zal je niet langer InstallerX Revived kunnen gebruiken om apps te installeren.</string>
+    <string name="uninstall_title">InstallerX verwijderen</string>
+    <string name="uninstall_content">Na het verwijderen van deze app zal je niet langer InstallerX kunnen gebruiken om apps te installeren.</string>
     <string name="stable">Stabiel</string>
     <string name="preview">Voorbeeld</string>
     <string name="unstable">Onstabiel</string>

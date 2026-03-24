@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">InstallerX Revived</string>
+    <string name="app_name" translatable="false">InstallerX</string>
     <string name="agreement_title">Policy</string>
     <!--<string name="agreement_text">Here is our user policy, Please read and agree to it. &lt;a href="https://iamr0s.github.io/InstallerXDocs/terms"&gt;User Policy&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/InstallerXDocs/privacy"&gt;Privacy Policy&lt;/a&gt; This message won\'t show up again after you agree.</string>-->
     <string name="user_terms">User policy</string>
@@ -20,10 +20,13 @@
     <string name="about">About</string>
     <string name="other">Other</string>
     <string name="performance">Performance</string>
+    <string name="xposed">Xposed Module Integration</string>
+    <string name="xposed_1">Module Settings</string>
+    <string name="xposed_desc">Configure integrated Xposed modules</string>
     <string name="lab">Laboratory</string>
     <string name="lab_desc">Access experimental and developer features</string>
     <string name="debug">Debug</string>
-    <string name="about_detail">About InstallerX Revived</string>
+    <string name="about_detail">About InstallerX</string>
     <string name="app_version_info_format">%1$s %2$s %3$s (%4$s)</string>
     <string name="updating">Updating…</string>
     <string name="get_update">Get update</string>
@@ -39,8 +42,8 @@
     <string name="export_logs_desc">Export logs of the app</string>
     <string name="internet_access_enabled">Online</string>
     <string name="internet_access_disabled">Offline</string>
-    <string name="uninstall_title">Uninstall InstallerX Revived</string>
-    <string name="uninstall_content">After uninstalling this app, you will no longer be able to use InstallerX Revived to install apps.</string>
+    <string name="uninstall_title">Uninstall InstallerX</string>
+    <string name="uninstall_content">After uninstalling this app, you will no longer be able to use InstallerX to install apps.</string>
     <string name="stable">Stable</string>
     <string name="preview">Preview</string>
     <string name="unstable">Unstable</string>
@@ -397,6 +400,10 @@
     <string name="uninstall_all_users_disabled">Uninstall for all users was disabled</string>
     <string name="uninstall_delete_system_app">Delete SystemApp</string>
     <string name="uninstall_delete_system_app_desc">Allow deleting system apps for current user</string>
+    <string name="uninstaller_locker">Forced Lock Uninstaller</string>
+    <string name="uninstaller_locker_desc">Forced lock InstallerX as the default uninstaller</string>
+    <string name="Finstaller_locker">Forced Lock Installer</string>
+    <string name="Finstaller_locker_desc">Forced lock InstallerX as the default installer</string>
     <string name="uninstall_system_app_disabled">System app removal was disabled</string>
     <string name="uninstall_success_message">Uninstall Success</string>
     <string name="uninstall_failed_message">Uninstall Failed</string>
@@ -725,4 +732,8 @@
     <string name="lab_set_install_requester_desc">Fill OriginatingUid field with caller package to match system behavior</string>
     <string name="lab_mi_island">Mi Super Island</string>
     <string name="lab_mi_island_desc">Global notification style. System signature verification can only be bypassed when the custom app-authenticator is set to Shizuku. Root users can enable this directly after manually disabling signature restrictions</string>
+    <string name="module_status_active">Module Active</string>
+    <string name="module_status_inactive">Module Inactive</string>
+    <string name="module_status_active_desc">InxLocker module is working normally</string>
+    <string name="module_status_inactive_desc">Please activate the module in Xposed Manager</string>
 </resources>

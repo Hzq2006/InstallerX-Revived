@@ -33,6 +33,8 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
@@ -70,6 +72,7 @@ fun PreferredPage(
     val uiState by viewModel.state.collectAsStateWithLifecycle()
     val capabilityProvider = koinInject<DeviceCapabilityProvider>()
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+    val lsposedIcon = ImageVector.vectorResource(R.drawable.ic_lsposed)
 
     OnLifecycleEvent(Lifecycle.Event.ON_RESUME) {
         viewModel.dispatch(PreferredViewAction.RefreshIgnoreBatteryOptimizationStatus)
@@ -238,6 +241,14 @@ fun PreferredPage(
                     }
                     item { ClearCache() }
                     item { LabelWidget(stringResource(R.string.other)) }
+                    item {
+                        SettingsAboutItemWidget(
+                            imageVector = lsposedIcon,
+                            headlineContentText = stringResource(R.string.xposed),
+                            supportingContentText = stringResource(R.string.xposed_desc),
+                            onClick = { navController.navigate(SettingsScreen.Xposed.route) }
+                        )
+                    }
                     item {
                         SettingsAboutItemWidget(
                             imageVector = AppIcons.Lab,

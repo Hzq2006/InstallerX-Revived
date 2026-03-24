@@ -35,6 +35,7 @@ import com.rosan.installer.ui.page.main.widget.setting.UninstallForAllUsersWidge
 import com.rosan.installer.ui.page.main.widget.setting.UninstallKeepDataWidget
 import com.rosan.installer.ui.page.main.widget.setting.UninstallRequireBiometricAuthWidget
 import com.rosan.installer.ui.page.main.widget.setting.UninstallSystemAppWidget
+//import com.rosan.installer.ui.page.main.widget.setting.UninstallerLocker
 import com.rosan.installer.ui.theme.none
 import com.rosan.installer.util.toast
 import org.koin.androidx.compose.koinViewModel
@@ -89,6 +90,7 @@ fun LegacyUninstallerGlobalSettingsPage(
         ) {
             item { InfoTipCard(text = stringResource(R.string.uninstall_authorizer_tip)) }
             item { LabelWidget(label = stringResource(R.string.global)) }
+//            item { UninstallerLocker(viewModel, isM3E = false) }
             item { UninstallKeepDataWidget(viewModel, isM3E = false) }
             item { UninstallForAllUsersWidget(viewModel, isM3E = false) }
             item { UninstallSystemAppWidget(viewModel, isM3E = false) }

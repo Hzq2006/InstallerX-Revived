@@ -1089,3 +1089,16 @@ fun MiuixUninstallRequireBiometricAuthWidget(viewModel: UninstallerSettingsViewM
         )
     }
 }
+
+@Composable
+fun MiuixUninstallerLocker(viewModel: UninstallerSettingsViewModel) {
+    val uiState by viewModel.state.collectAsStateWithLifecycle()
+    MiuixSwitchWidget(
+        title = stringResource(id = R.string.uninstaller_locker),
+        description = stringResource(id = R.string.uninstaller_locker_desc),
+        checked = uiState.uninstallFlags.hasFlag(PackageManagerUtil.DELETE_SYSTEM_APP),
+        onCheckedChange = {
+            viewModel.dispatch(UninstallerSettingsAction.ToggleGlobalUninstallFlag(PackageManagerUtil.DELETE_SYSTEM_APP, it))
+        }
+    )
+}

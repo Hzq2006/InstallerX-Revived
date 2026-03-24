@@ -130,6 +130,9 @@ object AppIcons {
     val Dhizuku = null // Dhizuku 图标
     val Customize = Icons.Outlined.Settings
     // --- 授权器图标结束 ---
+    val LSPosed = null// ImageVector
+        // @Composable
+        // get() = ImageVector.vectorResource(id = R.drawable.ic_lsposed)
 
     // --- 安装方式图标集合 ---
     val Dialog = Icons.Outlined.WebAsset

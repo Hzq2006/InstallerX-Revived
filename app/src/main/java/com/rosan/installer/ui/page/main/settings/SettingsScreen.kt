@@ -10,6 +10,7 @@ sealed class SettingsScreen(val route: String) {
     data object InstallerGlobal : SettingsScreen("installerGlobal")
     data object UninstallerGlobal : SettingsScreen("uninstallerGlobal")
     data object Lab : SettingsScreen("lab")
+    data object Xposed : SettingsScreen("xposed")
 
     sealed class Builder(val route: String) {
         data object Main : SettingsScreen("main")

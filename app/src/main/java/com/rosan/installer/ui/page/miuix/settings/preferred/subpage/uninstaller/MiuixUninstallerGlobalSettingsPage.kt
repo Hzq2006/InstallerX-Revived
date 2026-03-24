@@ -34,6 +34,7 @@ import com.rosan.installer.ui.page.miuix.widgets.MiuixUninstallKeepDataWidget
 import com.rosan.installer.ui.page.miuix.widgets.MiuixUninstallPackageDialog
 import com.rosan.installer.ui.page.miuix.widgets.MiuixUninstallRequireBiometricAuthWidget
 import com.rosan.installer.ui.page.miuix.widgets.MiuixUninstallSystemAppWidget
+import com.rosan.installer.ui.page.miuix.widgets.MiuixUninstallerLocker
 import com.rosan.installer.ui.theme.getMiuixAppBarColor
 import com.rosan.installer.ui.theme.installerHazeEffect
 import com.rosan.installer.ui.theme.rememberMiuixHazeStyle
@@ -119,6 +120,7 @@ fun MiuixUninstallerGlobalSettingsPage(
                     MiuixUninstallForAllUsersWidget(viewModel)
                     MiuixUninstallSystemAppWidget(viewModel)
                     MiuixUninstallRequireBiometricAuthWidget(viewModel)
+                    MiuixUninstallerLocker(viewModel)
                 }
             }
             item { SmallTitle(stringResource(R.string.uninstall_call_uninstaller)) }

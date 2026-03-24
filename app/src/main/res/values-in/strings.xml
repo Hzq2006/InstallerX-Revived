@@ -18,7 +18,7 @@
     <string name="other">Lainnya</string>
     <string name="lab">Laboratorium</string>
     <string name="lab_desc">Akses fitur eksperimental dan pengembang</string>
-    <string name="about_detail">Tentang InstallerX Revived</string>
+    <string name="about_detail">Tentang InstallerX</string>
     <string name="updating">Memperbarui…</string>
     <string name="get_update">Dapatkan pembaruan</string>
     <string name="get_update_detail">Periksa pembaruan perangkat lunak dan fitur baru</string>
@@ -29,8 +29,8 @@
     <string name="get_source_code_detail">Periksa sumber kode di GitHub</string>
     <string name="internet_access_enabled">Daring</string>
     <string name="internet_access_disabled">Luring</string>
-    <string name="uninstall_title">Copot Pemasangan InstallerX Revived</string>
-    <string name="uninstall_content">Setelah menghapus instalasi aplikasi ini, Anda tidak akan dapat lagi menggunakan InstallerX Revived untuk menginstal aplikasi.</string>
+    <string name="uninstall_title">Copot Pemasangan InstallerX</string>
+    <string name="uninstall_content">Setelah menghapus instalasi aplikasi ini, Anda tidak akan dapat lagi menggunakan InstallerX untuk menginstal aplikasi.</string>
     <string name="stable">Stabil</string>
     <string name="preview">Pratinjau</string>
     <string name="unstable">Tidak stabil</string>

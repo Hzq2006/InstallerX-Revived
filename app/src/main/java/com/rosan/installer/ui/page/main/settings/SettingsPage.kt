@@ -28,6 +28,8 @@ import com.rosan.installer.ui.page.main.settings.preferred.subpage.about.NewAbou
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.about.OpenSourceLicensePage
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.installer.LegacyInstallerGlobalSettingsPage
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.installer.NewInstallerGlobalSettingsPage
+import com.rosan.installer.ui.page.main.settings.preferred.subpage.xposed.LegacyXposedPage
+import com.rosan.installer.ui.page.main.settings.preferred.subpage.xposed.NewXposedPage
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.lab.LegacyLabPage
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.lab.NewLabPage
 import com.rosan.installer.ui.page.main.settings.preferred.subpage.theme.LegacyThemeSettingsPage
@@ -219,6 +221,17 @@ fun SettingsPage(
                 NewLabPage(navController = navController)
             } else {
                 LegacyLabPage(navController = navController)
+            }
+        }
+        composable(
+            route = SettingsScreen.Xposed.route,
+            enterTransition = { slideInHorizontally(initialOffsetX = { it }) },
+            popExitTransition = { scaleOut(targetScale = 0.9f) + fadeOut() }
+        ) {
+            if (isExpressive) {
+                NewXposedPage(navController = navController)
+            } else {
+                LegacyXposedPage(navController = navController)
             }
         }
     }

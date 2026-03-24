@@ -16,7 +16,7 @@
     <string name="menu">Menu</string>
     <string name="about">Sobre</string>
     <string name="other">Outro</string>
-    <string name="about_detail">Sobre o InstallerX Revived</string>
+    <string name="about_detail">Sobre o InstallerX</string>
     <string name="get_update">Obter atualização</string>
     <string name="get_update_detail">Verifique se há atualizações de software e novos recursos</string>
     <string name="internet_access_enabled">Online</string>
@@ -479,8 +479,8 @@
     <string name="split_name_language_group_title">Partes de Idioma</string>
     <string name="split_name_density_group_title">Partes de Densidade de Tela</string>
     <string name="split_name_feature_group_title">Partes de Funções</string>
-    <string name="uninstall_title">Desinstalar InstallerX Revived</string>
-    <string name="uninstall_content">Após desinstalar este app, você não poderá mais usar o InstallerX Revived para instalar apps.</string>
+    <string name="uninstall_title">Desinstalar InstallerX</string>
+    <string name="uninstall_content">Após desinstalar este app, você não poderá mais usar o InstallerX para instalar apps.</string>
     <string name="exception_install_parse_failed_no_certificates">Certificados ausentes</string>
     <string name="config_install_authorizer_desc">Autorizador para instalar aplicativos</string>
     <string name="config_app_authorizer_desc">Autorizador para realizar operações privilegiadas</string>

@@ -22,6 +22,7 @@ dependencyResolutionManagement {
         // maven { setUrl("https://repo.huaweicloud.com/repository/maven/") }
         google()
         mavenCentral()
+        maven { setUrl("https://api.xposed.info/") }
         maven { setUrl("https://jitpack.io") }
         // maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
         // GitHub Packages (compose-miuix-ui/miuix)

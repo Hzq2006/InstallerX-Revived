@@ -50,7 +50,7 @@ android {
         // If you use InstallerX source code, package it into apk or other installation package format
         // Please change the applicationId to one that does not conflict with any official release.
         applicationId = project.findProperty("APP_ID") as String?
-            ?: "com.rosan.installer.x.revived"
+            ?: "com.rosan.installer.x.revi"
         namespace = "com.rosan.installer"
         minSdk = 26
         targetSdk = 36
@@ -257,4 +257,14 @@ dependencies {
     implementation(libs.focus.api)
 
     implementation(libs.materialKolor)
+
+    implementation(libs.api)
+    // 推荐使用 KavaRef 作为核心反射 API
+    implementation(libs.kavaref.core)
+    implementation(libs.kavaref.extension)
+    compileOnly(libs.xposed.api)
+    ksp(libs.ksp.xposed)
+    // compileOnly("com.highcapable.yukihookapi:api:1.2.0")
+    // compileOnly("com.highcapable.kavaref:kava-ref:1.0.0")
+    // compileOnly("de.robv.android.xposed:api:82")
 }
