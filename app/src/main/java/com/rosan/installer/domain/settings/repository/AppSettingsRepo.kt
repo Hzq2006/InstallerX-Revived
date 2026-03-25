@@ -61,6 +61,9 @@ enum class BooleanSetting {
     LabSetInstallRequester,
     AutoLockUninstaller,
     ForceLockInstaller,
+    InterceptSessionInstall,
+    FixPermissions,
+    XposedDebugLog,
     EnableFileLogging
 }
 

@@ -8,22 +8,22 @@ import com.rosan.installer.core.env.AppConfig
 object IntentRedirector {
 
     private const val KEY_FORCED_INSTALLER_COMPONENTS = "forced_installer_components"
-    private const val KEY_FOLLOW_UNINSTALL_WITH_INSTALLER = "follow_uninstall_with_installer"
-    private const val KEY_SELECTED_UNINSTALLER_PACKAGE = "selected_uninstaller_package"
-    private const val value = AppConfig.OFFICIAL_PACKAGE_NAME
+    //private const val KEY_FOLLOW_UNINSTALL_WITH_INSTALLER = "follow_uninstall_with_installer"
+    //private const val KEY_SELECTED_UNINSTALLER_PACKAGE = "selected_uninstaller_package"
+    //private const val value = AppConfig.OFFICIAL_PACKAGE_NAME
 
     fun reloadPrefs() = PrefsProvider.reload()
 
     private fun getSelectedInstallerPackage(): String? {
         //val value = PrefsProvider.getString("selected_installer_package", "")
         //return if (value.isNullOrBlank()) null else value
-        return value
+        return AppConfig.OFFICIAL_PACKAGE_NAME
     }
 
     private fun getSelectedUninstallerPackage(): String? {
         //val value = PrefsProvider.getString(KEY_SELECTED_UNINSTALLER_PACKAGE, "")
         //return if (value.isNullOrBlank()) null else value
-        return value
+        return AppConfig.OFFICIAL_PACKAGE_NAME
     }
 
     private fun getFollowUninstallWithInstaller(): Boolean {

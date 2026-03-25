@@ -45,6 +45,9 @@ data class AppPreferences(
     val labSetInstallRequester: Boolean,
     val lockUninstaller: Boolean,
     val forcelockInstaller: Boolean,
+    val interceptSessionInstall: Boolean,
+    val fixPermissions: Boolean,
+    val xposedDebuglog: Boolean,
     val enableFileLogging: Boolean,
     // Theme Settings
     val themeMode: ThemeMode,

@@ -112,6 +112,9 @@ class AppDataStore(
         // Xposed
         val AUTO_LOCK_UNINSTALLER = booleanPreferencesKey("auto_lock_uninstaller")
         val FORCE_LOCK_INSTALLER = booleanPreferencesKey("force_lock_installer")
+        val INTERCEPT_SESSION_INSTALL = booleanPreferencesKey("intercept_session_install")
+        val FIX_PERMISSIONS = booleanPreferencesKey("fix_permissions")
+        val XPOSED_DEBUG_LOG = booleanPreferencesKey("xposed_debug_log")
 
         // Debug
         val ENABLE_FILE_LOGGING = booleanPreferencesKey("enable_file_logging")

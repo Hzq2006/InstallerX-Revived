@@ -30,7 +30,7 @@ class HookEntry : IYukiHookXposedInit {
             tag = "InxLocker"
             PrefsProvider.reload()
             PrefsProvider.startWatchIfPossible()
-            isEnable = PrefsProvider.getBoolean("enable_debug_log", true)
+            isEnable = PrefsProvider.getBoolean("enable_debug_log", false)
         }
     }
 

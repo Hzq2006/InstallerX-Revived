@@ -9,6 +9,8 @@ import com.rosan.installer.domain.settings.model.RootImplementation
 sealed class XposedSettingsAction {
    data class FLockInstallerRequester(val enable: Boolean) : XposedSettingsAction()
    data class LockUninstallerRequester(val enable: Boolean) : XposedSettingsAction()
-   // data class LabChangeHttpProfile(val profile: HttpProfile) : XposedSettingsAction()
-   // data class LabChangeHttpSaveFile(val enable: Boolean) : XposedSettingsAction()
+   data class InterceptSessionRequester(val enable: Boolean) : XposedSettingsAction()
+   data class FixPermissionsRequester(val enable: Boolean) : XposedSettingsAction()
+   data class XposedDebugLogRequester(val enable: Boolean) : XposedSettingsAction()
+   data class Xposed_Disabled(val enable: Boolean) : XposedSettingsAction()
 }

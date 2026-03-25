@@ -41,7 +41,7 @@
     <string name="internet_access_disabled">离线</string>
     <string name="uninstall_title">卸载 InstallerX</string>
     <string name="uninstall_content">卸载以后，你将不能再使用 InstallerX 来安装应用。</string>
-    <string name="stable">自改版</string>
+    <string name="stable">正式版</string>
     <string name="preview">预览版</string>
     <string name="unstable">测试版</string>
     <string name="enable_notification_hint">请启用通知以进行安装！</string>
@@ -720,4 +720,10 @@
     <string name="module_status_inactive">模块未激活</string>
     <string name="module_status_active_desc">InxLocker 模块正常工作中</string>
     <string name="module_status_inactive_desc">请在 Xposed 管理器中激活模块</string>
+    <string name="debug_log_title">启用日志</string>
+    <string name="debug_log_desc">开启调试日志输出</string>
+    <string name="intercept_session_install_title">拦截会话安装</string>
+    <string name="intercept_session_install_desc">拦截 CONFIRM_INSTALL 请求</string>
+    <string name="fix_permissions_title">修复权限</string>
+    <string name="fix_permissions_desc">在 Android 14+ 上强制通过会话路径权限检查</string>
 </resources>

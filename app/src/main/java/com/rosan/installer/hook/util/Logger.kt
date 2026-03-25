@@ -6,7 +6,7 @@ private object LogSwitchProvider {
     private const val KEY_ENABLE = "enable_debug_log"
 
     fun isEnabled(): Boolean = try {
-        PrefsProvider.getBoolean(KEY_ENABLE, true)
+        PrefsProvider.getBoolean(KEY_ENABLE, false)
     } catch (_: Throwable) {
         true
     }

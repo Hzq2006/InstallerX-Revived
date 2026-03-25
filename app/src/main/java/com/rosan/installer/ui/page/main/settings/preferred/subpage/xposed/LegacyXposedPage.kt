@@ -22,11 +22,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
@@ -42,10 +44,12 @@ import com.rosan.installer.ui.page.main.widget.setting.LabRootImplementationWidg
 import com.rosan.installer.ui.page.main.widget.setting.LabelWidget
 import com.rosan.installer.ui.page.main.widget.setting.SwitchWidget
 //import com.rosan.installer.ui.page.main.widget.setting.UninstallerLocker
+import com.rosan.installer.util.toast
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.koinInject
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.hook.factory.prefs
+import com.rosan.installer.ui.page.main.widget.card.ModuleStatusCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,8 +59,17 @@ fun LegacyXposedPage(
 ) {
     val uiState by viewModel.state.collectAsStateWithLifecycle()
     val capabilityProvider = koinInject<DeviceCapabilityProvider>()
+    val context = LocalContext.current
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val isActive = runCatching { YukiHookAPI.Status.isXposedModuleActive }.getOrDefault(false)
+
+    LaunchedEffect(Unit) {
+        viewModel.uiEvents.collect { event ->
+            when (event) {
+                is XposedSettingsEvent.ShowMessage -> context.toast(event.resId)
+            }
+        }
+    }
     /*val showRootImplementationDialog = remember { mutableStateOf(false) }
     val isMiIslandSupported = remember { capabilityProvider.isSupportMiIsland }
     if (showRootImplementationDialog.value) {
@@ -101,47 +114,71 @@ fun LegacyXposedPage(
                         .fillMaxSize()
                         .padding(paddingValues)
                 ) {
-                    item { InfoTipCard(text = stringResource(if (isActive) R.string.lab_tip else R.string.module_status_inactive_desc)) }
+                    item { ModuleStatusCard(isActive) }
+                    item { InfoTipCard(text = stringResource(R.string.lab_tip)) }
                     item { LabelWidget(stringResource(R.string.global)) }
                     item {
                         SwitchWidget(
                             icon = AppIcons.AutoLockDefault,
                             title = stringResource(R.string.Finstaller_locker),
                             description = stringResource(R.string.Finstaller_locker_desc),
-                            checked = uiState.forcelockInstaller,
+                            checked = uiState.forcelockInstaller && isActive,
                             isM3E = false,
-                            onCheckedChange = { viewModel.dispatch(XposedSettingsAction.FLockInstallerRequester(it)) }
+                            onCheckedChange = {viewModel.dispatch(if(isActive)XposedSettingsAction.FLockInstallerRequester(it) else XposedSettingsAction.Xposed_Disabled(it)) }
                         )
+                    }
+                    item {
+                        AnimatedVisibility(
+                            visible = uiState.forcelockInstaller && isActive,
+                            enter = fadeIn() + expandVertically(),
+                            exit = fadeOut() + shrinkVertically()
+                        ) {
+                            SwitchWidget(
+                                icon = AppIcons.Intercept,
+                                title = stringResource(R.string.intercept_session_install_title),
+                                description = stringResource(R.string.intercept_session_install_desc),
+                                checked = uiState.interceptsessionInstall,
+                                isM3E = false,
+                                onCheckedChange = { viewModel.dispatch(XposedSettingsAction.InterceptSessionRequester(it)) }
+                            )
+                        }
+                    }
+                    item {
+                        AnimatedVisibility(
+                            visible = uiState.interceptsessionInstall && isActive,
+                            enter = fadeIn() + expandVertically(),
+                            exit = fadeOut() + shrinkVertically()
+                        ) {
+                            SwitchWidget(
+                                icon = AppIcons.Lock,
+                                title = stringResource(R.string.fix_permissions_title),
+                                description = stringResource(R.string.fix_permissions_desc),
+                                checked = uiState.fixPermissions,
+                                isM3E = false,
+                                onCheckedChange = { viewModel.dispatch(XposedSettingsAction.FixPermissionsRequester(it)) }
+                            )
+                        }
                     }
                     item {
                         SwitchWidget(
                             icon = AppIcons.Delete,
                             title = stringResource(R.string.uninstaller_locker),
                             description = stringResource(R.string.uninstaller_locker_desc),
-                            checked = uiState.lockUninstaller,
+                            checked = uiState.lockUninstaller && isActive,
                             isM3E = false,
-                            onCheckedChange = { viewModel.dispatch(XposedSettingsAction.LockUninstallerRequester(it)) }
+                            onCheckedChange = { viewModel.dispatch(if (isActive) XposedSettingsAction.LockUninstallerRequester(it) else XposedSettingsAction.Xposed_Disabled(it)) }
                         )
                     }
                     // --- Unstable Features Section ---
-                    item { LabelWidget(stringResource(R.string.lab_unstable_features)) }
-                    // if (isMiIslandSupported) item {
-                    //     SwitchWidget(
-                    //         title = stringResource(R.string.lab_mi_island),
-                    //         description = stringResource(R.string.lab_mi_island_desc),
-                    //         isM3E = false,
-                    //         checked = uiState.labUseMiIsland,
-                    //         onCheckedChange = { viewModel.dispatch(XposedSettingsAction.LabChangeUseMiIsland(it)) }
-                    //     )
-                    // }
+                    item { LabelWidget(stringResource(R.string.debug)) }
                     item {
                         SwitchWidget(
-                            icon = AppIcons.InstallRequester,
-                            title = stringResource(R.string.lab_set_install_requester),
-                            description = stringResource(R.string.lab_set_install_requester_desc),
-                            checked = uiState.lockUninstaller,
+                            icon = AppIcons.BugReport,
+                            title = stringResource(R.string.debug_log_title),
+                            description = stringResource(R.string.debug_log_desc),
+                            checked = uiState.xposedDebuglog && isActive,
                             isM3E = false,
-                            onCheckedChange = { viewModel.dispatch(XposedSettingsAction.LockUninstallerRequester(it)) }
+                            onCheckedChange = { viewModel.dispatch(if (isActive) XposedSettingsAction.XposedDebugLogRequester(it) else XposedSettingsAction.Xposed_Disabled(it)) }
                         )
                     }
                     item { Spacer(Modifier.navigationBarsPadding()) }

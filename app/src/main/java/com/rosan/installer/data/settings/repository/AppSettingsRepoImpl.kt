@@ -79,6 +79,9 @@ class AppSettingsRepoImpl(
             //Xposed settings
             appDataStore.getBoolean(AppDataStore.AUTO_LOCK_UNINSTALLER, false),
             appDataStore.getBoolean(AppDataStore.FORCE_LOCK_INSTALLER, false),
+            appDataStore.getBoolean(AppDataStore.INTERCEPT_SESSION_INSTALL, false),
+            appDataStore.getBoolean(AppDataStore.FIX_PERMISSIONS, false),
+            appDataStore.getBoolean(AppDataStore.XPOSED_DEBUG_LOG, false),
             appDataStore.getBoolean(AppDataStore.ENABLE_FILE_LOGGING, true),
 
             // Theme settings
@@ -142,6 +145,9 @@ class AppSettingsRepoImpl(
             labSetInstallRequester = values[idx++] as Boolean,
             lockUninstaller = values[idx++] as Boolean,
             forcelockInstaller = values[idx++] as Boolean,
+            interceptSessionInstall = values[idx++] as Boolean,
+            fixPermissions = values[idx++] as Boolean,
+            xposedDebuglog = values[idx++] as Boolean,
             enableFileLogging = values[idx++] as Boolean,
 
             themeMode = runCatching { ThemeMode.valueOf(values[idx++] as String) }.getOrDefault(ThemeMode.SYSTEM),
@@ -252,6 +258,9 @@ class AppSettingsRepoImpl(
             BooleanSetting.LabSetInstallRequester -> AppDataStore.LAB_SET_INSTALL_REQUESTER
             BooleanSetting.AutoLockUninstaller -> AppDataStore.AUTO_LOCK_UNINSTALLER
             BooleanSetting.ForceLockInstaller -> AppDataStore.FORCE_LOCK_INSTALLER
+            BooleanSetting.InterceptSessionInstall -> AppDataStore.INTERCEPT_SESSION_INSTALL
+            BooleanSetting.FixPermissions -> AppDataStore.FIX_PERMISSIONS
+            BooleanSetting.XposedDebugLog -> AppDataStore.XPOSED_DEBUG_LOG
             BooleanSetting.EnableFileLogging -> AppDataStore.ENABLE_FILE_LOGGING
         }
 

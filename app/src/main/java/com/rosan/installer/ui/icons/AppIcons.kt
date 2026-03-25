@@ -80,7 +80,9 @@ import androidx.compose.material.icons.twotone.TaskAlt
 import androidx.compose.material.icons.twotone.Terminal
 import androidx.compose.material.icons.twotone.Timer
 import androidx.compose.material.icons.twotone.Widgets
-
+import androidx.compose.material.icons.twotone.Lock
+import androidx.compose.material.icons.twotone.Notifications
+import androidx.compose.material.icons.twotone.Warning
 /**
  * 将图标统一管理在一个对象中
  */
@@ -210,4 +212,9 @@ object AppIcons {
 
     // Lab Icons
     val InstallRequester = Icons.AutoMirrored.TwoTone.FactCheck
+
+    // Xposed Module Icons
+    val Intercept = Icons.TwoTone.Notifications
+    val Lock = Icons.TwoTone.Lock
+    val Warn = Icons.TwoTone.Warning
 }
